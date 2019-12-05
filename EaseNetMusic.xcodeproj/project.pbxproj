@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24B474204BCE4F2AD2C25409 /* Pods_EaseNetMusicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E2A2432E5E60015FE1EF8E /* Pods_EaseNetMusicUITests.framework */; };
+		31F93329C89CAFD9DF7E5022 /* Pods_EaseNetMusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F8D0D6C485D8535D6108A9 /* Pods_EaseNetMusicTests.framework */; };
+		34C0401A23989DEE00A496F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0401923989DEE00A496F8 /* AppDelegate.swift */; };
+		34C0401C23989DEE00A496F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0401B23989DEE00A496F8 /* SceneDelegate.swift */; };
+		34C0401E23989DEE00A496F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0401D23989DEE00A496F8 /* ViewController.swift */; };
+		34C0402123989DEE00A496F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C0401F23989DEE00A496F8 /* Main.storyboard */; };
+		34C0402323989DF100A496F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C0402223989DF100A496F8 /* Assets.xcassets */; };
+		34C0402623989DF100A496F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C0402423989DF100A496F8 /* LaunchScreen.storyboard */; };
+		34C0403123989DF100A496F8 /* EaseNetMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0403023989DF100A496F8 /* EaseNetMusicTests.swift */; };
+		34C0403C23989DF100A496F8 /* EaseNetMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0403B23989DF100A496F8 /* EaseNetMusicUITests.swift */; };
+		80C50AD1D08E618F21521DAF /* Pods_EaseNetMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34C0402D23989DF100A496F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C0400E23989DEE00A496F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34C0401523989DEE00A496F8;
+			remoteInfo = EaseNetMusic;
+		};
+		34C0403823989DF100A496F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C0400E23989DEE00A496F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34C0401523989DEE00A496F8;
+			remoteInfo = EaseNetMusic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09BCCCD2FAEBDD7786439B63 /* Pods-EaseNetMusicUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusicUITests.release.xcconfig"; path = "Target Support Files/Pods-EaseNetMusicUITests/Pods-EaseNetMusicUITests.release.xcconfig"; sourceTree = "<group>"; };
+		30AEADEB0E161C079BD91ED7 /* Pods-EaseNetMusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusicTests.release.xcconfig"; path = "Target Support Files/Pods-EaseNetMusicTests/Pods-EaseNetMusicTests.release.xcconfig"; sourceTree = "<group>"; };
+		30E2A2432E5E60015FE1EF8E /* Pods_EaseNetMusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EaseNetMusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C0401623989DEE00A496F8 /* EaseNetMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EaseNetMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C0401923989DEE00A496F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		34C0401B23989DEE00A496F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		34C0401D23989DEE00A496F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34C0402023989DEE00A496F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34C0402223989DF100A496F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34C0402523989DF100A496F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34C0402723989DF100A496F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C0402C23989DF100A496F8 /* EaseNetMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EaseNetMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C0403023989DF100A496F8 /* EaseNetMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseNetMusicTests.swift; sourceTree = "<group>"; };
+		34C0403223989DF100A496F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C0403723989DF100A496F8 /* EaseNetMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EaseNetMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C0403B23989DF100A496F8 /* EaseNetMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseNetMusicUITests.swift; sourceTree = "<group>"; };
+		34C0403D23989DF100A496F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4339F14DBDE6A43D569E5AC8 /* Pods-EaseNetMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusic.release.xcconfig"; path = "Target Support Files/Pods-EaseNetMusic/Pods-EaseNetMusic.release.xcconfig"; sourceTree = "<group>"; };
+		73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EaseNetMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B63B57E5B56688087791A32 /* Pods-EaseNetMusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-EaseNetMusicUITests/Pods-EaseNetMusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2F8D0D6C485D8535D6108A9 /* Pods_EaseNetMusicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EaseNetMusicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4FC053339EF9BBFE26CCC0E /* Pods-EaseNetMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusic.debug.xcconfig"; path = "Target Support Files/Pods-EaseNetMusic/Pods-EaseNetMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		ABFCCC258DCFF23973AEAD7B /* Pods-EaseNetMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusicTests.debug.xcconfig"; path = "Target Support Files/Pods-EaseNetMusicTests/Pods-EaseNetMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34C0401323989DEE00A496F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80C50AD1D08E618F21521DAF /* Pods_EaseNetMusic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C0402923989DF100A496F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31F93329C89CAFD9DF7E5022 /* Pods_EaseNetMusicTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C0403423989DF100A496F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B474204BCE4F2AD2C25409 /* Pods_EaseNetMusicUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34C0400D23989DEE00A496F8 = {
+			isa = PBXGroup;
+			children = (
+				34C0401823989DEE00A496F8 /* EaseNetMusic */,
+				34C0402F23989DF100A496F8 /* EaseNetMusicTests */,
+				34C0403A23989DF100A496F8 /* EaseNetMusicUITests */,
+				34C0401723989DEE00A496F8 /* Products */,
+				C70BF54285A1811F3D56FE8F /* Pods */,
+				BDE3D354F812B56A51CF3EE6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		34C0401723989DEE00A496F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34C0401623989DEE00A496F8 /* EaseNetMusic.app */,
+				34C0402C23989DF100A496F8 /* EaseNetMusicTests.xctest */,
+				34C0403723989DF100A496F8 /* EaseNetMusicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34C0401823989DEE00A496F8 /* EaseNetMusic */ = {
+			isa = PBXGroup;
+			children = (
+				34C0401923989DEE00A496F8 /* AppDelegate.swift */,
+				34C0401B23989DEE00A496F8 /* SceneDelegate.swift */,
+				34C0401D23989DEE00A496F8 /* ViewController.swift */,
+				34C0401F23989DEE00A496F8 /* Main.storyboard */,
+				34C0402223989DF100A496F8 /* Assets.xcassets */,
+				34C0402423989DF100A496F8 /* LaunchScreen.storyboard */,
+				34C0402723989DF100A496F8 /* Info.plist */,
+			);
+			path = EaseNetMusic;
+			sourceTree = "<group>";
+		};
+		34C0402F23989DF100A496F8 /* EaseNetMusicTests */ = {
+			isa = PBXGroup;
+			children = (
+				34C0403023989DF100A496F8 /* EaseNetMusicTests.swift */,
+				34C0403223989DF100A496F8 /* Info.plist */,
+			);
+			path = EaseNetMusicTests;
+			sourceTree = "<group>";
+		};
+		34C0403A23989DF100A496F8 /* EaseNetMusicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				34C0403B23989DF100A496F8 /* EaseNetMusicUITests.swift */,
+				34C0403D23989DF100A496F8 /* Info.plist */,
+			);
+			path = EaseNetMusicUITests;
+			sourceTree = "<group>";
+		};
+		BDE3D354F812B56A51CF3EE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */,
+				A2F8D0D6C485D8535D6108A9 /* Pods_EaseNetMusicTests.framework */,
+				30E2A2432E5E60015FE1EF8E /* Pods_EaseNetMusicUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C70BF54285A1811F3D56FE8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4FC053339EF9BBFE26CCC0E /* Pods-EaseNetMusic.debug.xcconfig */,
+				4339F14DBDE6A43D569E5AC8 /* Pods-EaseNetMusic.release.xcconfig */,
+				ABFCCC258DCFF23973AEAD7B /* Pods-EaseNetMusicTests.debug.xcconfig */,
+				30AEADEB0E161C079BD91ED7 /* Pods-EaseNetMusicTests.release.xcconfig */,
+				9B63B57E5B56688087791A32 /* Pods-EaseNetMusicUITests.debug.xcconfig */,
+				09BCCCD2FAEBDD7786439B63 /* Pods-EaseNetMusicUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34C0401523989DEE00A496F8 /* EaseNetMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34C0404023989DF100A496F8 /* Build configuration list for PBXNativeTarget "EaseNetMusic" */;
+			buildPhases = (
+				B0BB5889062DADE0A8E6F940 /* [CP] Check Pods Manifest.lock */,
+				34C0401223989DEE00A496F8 /* Sources */,
+				34C0401323989DEE00A496F8 /* Frameworks */,
+				34C0401423989DEE00A496F8 /* Resources */,
+				9E9222742624162C62177B21 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EaseNetMusic;
+			productName = EaseNetMusic;
+			productReference = 34C0401623989DEE00A496F8 /* EaseNetMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34C0402B23989DF100A496F8 /* EaseNetMusicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34C0404323989DF100A496F8 /* Build configuration list for PBXNativeTarget "EaseNetMusicTests" */;
+			buildPhases = (
+				5CC9B6DB893652B84F82C775 /* [CP] Check Pods Manifest.lock */,
+				34C0402823989DF100A496F8 /* Sources */,
+				34C0402923989DF100A496F8 /* Frameworks */,
+				34C0402A23989DF100A496F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34C0402E23989DF100A496F8 /* PBXTargetDependency */,
+			);
+			name = EaseNetMusicTests;
+			productName = EaseNetMusicTests;
+			productReference = 34C0402C23989DF100A496F8 /* EaseNetMusicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		34C0403623989DF100A496F8 /* EaseNetMusicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34C0404623989DF100A496F8 /* Build configuration list for PBXNativeTarget "EaseNetMusicUITests" */;
+			buildPhases = (
+				C29093F4A7D0E49272321C1A /* [CP] Check Pods Manifest.lock */,
+				34C0403323989DF100A496F8 /* Sources */,
+				34C0403423989DF100A496F8 /* Frameworks */,
+				34C0403523989DF100A496F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34C0403923989DF100A496F8 /* PBXTargetDependency */,
+			);
+			name = EaseNetMusicUITests;
+			productName = EaseNetMusicUITests;
+			productReference = 34C0403723989DF100A496F8 /* EaseNetMusicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34C0400E23989DEE00A496F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = lizhi;
+				TargetAttributes = {
+					34C0401523989DEE00A496F8 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					34C0402B23989DF100A496F8 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 34C0401523989DEE00A496F8;
+					};
+					34C0403623989DF100A496F8 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 34C0401523989DEE00A496F8;
+					};
+				};
+			};
+			buildConfigurationList = 34C0401123989DEE00A496F8 /* Build configuration list for PBXProject "EaseNetMusic" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34C0400D23989DEE00A496F8;
+			productRefGroup = 34C0401723989DEE00A496F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34C0401523989DEE00A496F8 /* EaseNetMusic */,
+				34C0402B23989DF100A496F8 /* EaseNetMusicTests */,
+				34C0403623989DF100A496F8 /* EaseNetMusicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34C0401423989DEE00A496F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34C0402623989DF100A496F8 /* LaunchScreen.storyboard in Resources */,
+				34C0402323989DF100A496F8 /* Assets.xcassets in Resources */,
+				34C0402123989DEE00A496F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C0402A23989DF100A496F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C0403523989DF100A496F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5CC9B6DB893652B84F82C775 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EaseNetMusicTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E9222742624162C62177B21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EaseNetMusic/Pods-EaseNetMusic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EaseNetMusic/Pods-EaseNetMusic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EaseNetMusic/Pods-EaseNetMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0BB5889062DADE0A8E6F940 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EaseNetMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C29093F4A7D0E49272321C1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EaseNetMusicUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34C0401223989DEE00A496F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34C0401E23989DEE00A496F8 /* ViewController.swift in Sources */,
+				34C0401A23989DEE00A496F8 /* AppDelegate.swift in Sources */,
+				34C0401C23989DEE00A496F8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C0402823989DF100A496F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34C0403123989DF100A496F8 /* EaseNetMusicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C0403323989DF100A496F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34C0403C23989DF100A496F8 /* EaseNetMusicUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34C0402E23989DF100A496F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34C0401523989DEE00A496F8 /* EaseNetMusic */;
+			targetProxy = 34C0402D23989DF100A496F8 /* PBXContainerItemProxy */;
+		};
+		34C0403923989DF100A496F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34C0401523989DEE00A496F8 /* EaseNetMusic */;
+			targetProxy = 34C0403823989DF100A496F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		34C0401F23989DEE00A496F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34C0402023989DEE00A496F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		34C0402423989DF100A496F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34C0402523989DF100A496F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34C0403E23989DF100A496F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		34C0403F23989DF100A496F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34C0404123989DF100A496F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4FC053339EF9BBFE26CCC0E /* Pods-EaseNetMusic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K54N85QB24;
+				INFOPLIST_FILE = EaseNetMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jiang.EaseNetMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34C0404223989DF100A496F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4339F14DBDE6A43D569E5AC8 /* Pods-EaseNetMusic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K54N85QB24;
+				INFOPLIST_FILE = EaseNetMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jiang.EaseNetMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		34C0404423989DF100A496F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABFCCC258DCFF23973AEAD7B /* Pods-EaseNetMusicTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K54N85QB24;
+				INFOPLIST_FILE = EaseNetMusicTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jiang.EaseNetMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EaseNetMusic.app/EaseNetMusic";
+			};
+			name = Debug;
+		};
+		34C0404523989DF100A496F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30AEADEB0E161C079BD91ED7 /* Pods-EaseNetMusicTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K54N85QB24;
+				INFOPLIST_FILE = EaseNetMusicTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jiang.EaseNetMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EaseNetMusic.app/EaseNetMusic";
+			};
+			name = Release;
+		};
+		34C0404723989DF100A496F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B63B57E5B56688087791A32 /* Pods-EaseNetMusicUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K54N85QB24;
+				INFOPLIST_FILE = EaseNetMusicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jiang.EaseNetMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EaseNetMusic;
+			};
+			name = Debug;
+		};
+		34C0404823989DF100A496F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09BCCCD2FAEBDD7786439B63 /* Pods-EaseNetMusicUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K54N85QB24;
+				INFOPLIST_FILE = EaseNetMusicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jiang.EaseNetMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EaseNetMusic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34C0401123989DEE00A496F8 /* Build configuration list for PBXProject "EaseNetMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C0403E23989DF100A496F8 /* Debug */,
+				34C0403F23989DF100A496F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34C0404023989DF100A496F8 /* Build configuration list for PBXNativeTarget "EaseNetMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C0404123989DF100A496F8 /* Debug */,
+				34C0404223989DF100A496F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34C0404323989DF100A496F8 /* Build configuration list for PBXNativeTarget "EaseNetMusicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C0404423989DF100A496F8 /* Debug */,
+				34C0404523989DF100A496F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34C0404623989DF100A496F8 /* Build configuration list for PBXNativeTarget "EaseNetMusicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C0404723989DF100A496F8 /* Debug */,
+				34C0404823989DF100A496F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34C0400E23989DEE00A496F8 /* Project object */;
+}
