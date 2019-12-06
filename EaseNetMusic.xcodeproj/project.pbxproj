@@ -3,20 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		24B474204BCE4F2AD2C25409 /* Pods_EaseNetMusicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E2A2432E5E60015FE1EF8E /* Pods_EaseNetMusicUITests.framework */; };
 		31F93329C89CAFD9DF7E5022 /* Pods_EaseNetMusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F8D0D6C485D8535D6108A9 /* Pods_EaseNetMusicTests.framework */; };
 		34C0401A23989DEE00A496F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0401923989DEE00A496F8 /* AppDelegate.swift */; };
-		34C0401C23989DEE00A496F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0401B23989DEE00A496F8 /* SceneDelegate.swift */; };
 		34C0401E23989DEE00A496F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0401D23989DEE00A496F8 /* ViewController.swift */; };
-		34C0402123989DEE00A496F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C0401F23989DEE00A496F8 /* Main.storyboard */; };
 		34C0402323989DF100A496F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C0402223989DF100A496F8 /* Assets.xcassets */; };
-		34C0402623989DF100A496F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C0402423989DF100A496F8 /* LaunchScreen.storyboard */; };
 		34C0403123989DF100A496F8 /* EaseNetMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0403023989DF100A496F8 /* EaseNetMusicTests.swift */; };
 		34C0403C23989DF100A496F8 /* EaseNetMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0403B23989DF100A496F8 /* EaseNetMusicUITests.swift */; };
+		34C040542399E79900A496F8 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C040532399E79900A496F8 /* ENTabBarController.swift */; };
+		34C040562399E8C600A496F8 /* ENNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C040552399E8C600A496F8 /* ENNavigationController.swift */; };
+		34C0405C2399E90F00A496F8 /* ENBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C0405B2399E90F00A496F8 /* ENBaseController.m */; };
+		34C040612399E94E00A496F8 /* ENDiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C040602399E94E00A496F8 /* ENDiscoverVC.swift */; };
+		34C040632399E95C00A496F8 /* ENMineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C040622399E95C00A496F8 /* ENMineVC.swift */; };
+		34C040652399E96800A496F8 /* ENMoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C040642399E96800A496F8 /* ENMoreVC.swift */; };
+		34C040672399E97500A496F8 /* ENVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C040662399E97500A496F8 /* ENVideoVC.swift */; };
+		34C040692399E98500A496F8 /* ENAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C040682399E98500A496F8 /* ENAccountVC.swift */; };
 		80C50AD1D08E618F21521DAF /* Pods_EaseNetMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,11 +48,8 @@
 		30E2A2432E5E60015FE1EF8E /* Pods_EaseNetMusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EaseNetMusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C0401623989DEE00A496F8 /* EaseNetMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EaseNetMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C0401923989DEE00A496F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34C0401B23989DEE00A496F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		34C0401D23989DEE00A496F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		34C0402023989DEE00A496F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34C0402223989DF100A496F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		34C0402523989DF100A496F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34C0402723989DF100A496F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34C0402C23989DF100A496F8 /* EaseNetMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EaseNetMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C0403023989DF100A496F8 /* EaseNetMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseNetMusicTests.swift; sourceTree = "<group>"; };
@@ -55,6 +57,16 @@
 		34C0403723989DF100A496F8 /* EaseNetMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EaseNetMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C0403B23989DF100A496F8 /* EaseNetMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseNetMusicUITests.swift; sourceTree = "<group>"; };
 		34C0403D23989DF100A496F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C040532399E79900A496F8 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
+		34C040552399E8C600A496F8 /* ENNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENNavigationController.swift; sourceTree = "<group>"; };
+		34C040592399E90E00A496F8 /* EaseNetMusic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EaseNetMusic-Bridging-Header.h"; sourceTree = "<group>"; };
+		34C0405A2399E90F00A496F8 /* ENBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENBaseController.h; sourceTree = "<group>"; };
+		34C0405B2399E90F00A496F8 /* ENBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENBaseController.m; sourceTree = "<group>"; };
+		34C040602399E94E00A496F8 /* ENDiscoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENDiscoverVC.swift; sourceTree = "<group>"; };
+		34C040622399E95C00A496F8 /* ENMineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENMineVC.swift; sourceTree = "<group>"; };
+		34C040642399E96800A496F8 /* ENMoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENMoreVC.swift; sourceTree = "<group>"; };
+		34C040662399E97500A496F8 /* ENVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENVideoVC.swift; sourceTree = "<group>"; };
+		34C040682399E98500A496F8 /* ENAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENAccountVC.swift; sourceTree = "<group>"; };
 		4339F14DBDE6A43D569E5AC8 /* Pods-EaseNetMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusic.release.xcconfig"; path = "Target Support Files/Pods-EaseNetMusic/Pods-EaseNetMusic.release.xcconfig"; sourceTree = "<group>"; };
 		73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EaseNetMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B63B57E5B56688087791A32 /* Pods-EaseNetMusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-EaseNetMusicUITests/Pods-EaseNetMusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,13 +128,12 @@
 		34C0401823989DEE00A496F8 /* EaseNetMusic */ = {
 			isa = PBXGroup;
 			children = (
+				34C0404A2399E6D100A496F8 /* Classes */,
 				34C0401923989DEE00A496F8 /* AppDelegate.swift */,
-				34C0401B23989DEE00A496F8 /* SceneDelegate.swift */,
 				34C0401D23989DEE00A496F8 /* ViewController.swift */,
-				34C0401F23989DEE00A496F8 /* Main.storyboard */,
 				34C0402223989DF100A496F8 /* Assets.xcassets */,
-				34C0402423989DF100A496F8 /* LaunchScreen.storyboard */,
 				34C0402723989DF100A496F8 /* Info.plist */,
+				34C040592399E90E00A496F8 /* EaseNetMusic-Bridging-Header.h */,
 			);
 			path = EaseNetMusic;
 			sourceTree = "<group>";
@@ -145,6 +156,86 @@
 			path = EaseNetMusicUITests;
 			sourceTree = "<group>";
 		};
+		34C0404A2399E6D100A496F8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				34C0404E2399E76500A496F8 /* Account */,
+				34C040522399E76500A496F8 /* BaseClasses */,
+				34C040502399E76500A496F8 /* Discover */,
+				34C0404F2399E76500A496F8 /* Mine */,
+				34C0404C2399E76500A496F8 /* More */,
+				34C0404B2399E76500A496F8 /* ThirdParty */,
+				34C0404D2399E76500A496F8 /* Utils */,
+				34C040512399E76500A496F8 /* Video */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		34C0404B2399E76500A496F8 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		34C0404C2399E76500A496F8 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				34C040642399E96800A496F8 /* ENMoreVC.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		34C0404D2399E76500A496F8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		34C0404E2399E76500A496F8 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				34C040682399E98500A496F8 /* ENAccountVC.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		34C0404F2399E76500A496F8 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				34C040622399E95C00A496F8 /* ENMineVC.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		34C040502399E76500A496F8 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				34C040602399E94E00A496F8 /* ENDiscoverVC.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		34C040512399E76500A496F8 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				34C040662399E97500A496F8 /* ENVideoVC.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		34C040522399E76500A496F8 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				34C040532399E79900A496F8 /* ENTabBarController.swift */,
+				34C040552399E8C600A496F8 /* ENNavigationController.swift */,
+				34C0405A2399E90F00A496F8 /* ENBaseController.h */,
+				34C0405B2399E90F00A496F8 /* ENBaseController.m */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
 		BDE3D354F812B56A51CF3EE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +256,6 @@
 				9B63B57E5B56688087791A32 /* Pods-EaseNetMusicUITests.debug.xcconfig */,
 				09BCCCD2FAEBDD7786439B63 /* Pods-EaseNetMusicUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -181,6 +271,7 @@
 				34C0401323989DEE00A496F8 /* Frameworks */,
 				34C0401423989DEE00A496F8 /* Resources */,
 				9E9222742624162C62177B21 /* [CP] Embed Pods Frameworks */,
+				34C040492399DDDD00A496F8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -241,6 +332,7 @@
 				TargetAttributes = {
 					34C0401523989DEE00A496F8 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					34C0402B23989DF100A496F8 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -277,9 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C0402623989DF100A496F8 /* LaunchScreen.storyboard in Resources */,
 				34C0402323989DF100A496F8 /* Assets.xcassets in Resources */,
-				34C0402123989DEE00A496F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +390,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		34C040492399DDDD00A496F8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		5CC9B6DB893652B84F82C775 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,9 +497,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C040652399E96800A496F8 /* ENMoreVC.swift in Sources */,
+				34C040672399E97500A496F8 /* ENVideoVC.swift in Sources */,
 				34C0401E23989DEE00A496F8 /* ViewController.swift in Sources */,
 				34C0401A23989DEE00A496F8 /* AppDelegate.swift in Sources */,
-				34C0401C23989DEE00A496F8 /* SceneDelegate.swift in Sources */,
+				34C0405C2399E90F00A496F8 /* ENBaseController.m in Sources */,
+				34C040562399E8C600A496F8 /* ENNavigationController.swift in Sources */,
+				34C040612399E94E00A496F8 /* ENDiscoverVC.swift in Sources */,
+				34C040692399E98500A496F8 /* ENAccountVC.swift in Sources */,
+				34C040542399E79900A496F8 /* ENTabBarController.swift in Sources */,
+				34C040632399E95C00A496F8 /* ENMineVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,25 +540,6 @@
 			targetProxy = 34C0403823989DF100A496F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		34C0401F23989DEE00A496F8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				34C0402023989DEE00A496F8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		34C0402423989DF100A496F8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				34C0402523989DF100A496F8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		34C0403E23989DF100A496F8 /* Debug */ = {
@@ -566,17 +661,21 @@
 			baseConfigurationReference = A4FC053339EF9BBFE26CCC0E /* Pods-EaseNetMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K54N85QB24;
 				INFOPLIST_FILE = EaseNetMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jiang.EaseNetMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EaseNetMusic/EaseNetMusic-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -585,17 +684,20 @@
 			baseConfigurationReference = 4339F14DBDE6A43D569E5AC8 /* Pods-EaseNetMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K54N85QB24;
 				INFOPLIST_FILE = EaseNetMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jiang.EaseNetMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EaseNetMusic/EaseNetMusic-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
