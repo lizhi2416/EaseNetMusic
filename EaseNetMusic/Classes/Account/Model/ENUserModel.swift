@@ -51,43 +51,6 @@ class ENUserModel: Codable {
     var profile: ENUserProfile?
     var token: String?
     var bindings: [ENUserBindInfo]?
-    
-//    required init?(coder: NSCoder) {
-//
-//        super.init()
-//
-//        var count: UInt32 = 0
-//        let list = class_copyIvarList(ENUserModel.self, &count)
-//        for i in 0..<Int(count) {
-//            if let iva = list?[i] {
-//                if let cName = ivar_getName(iva) {
-//                    if let name = String(utf8String: cName) {
-//                        //进行解档取值
-//                        let value = coder.decodeObject(forKey: name)
-//                        //利用KVC对属性赋值
-//                        self.setValue(value, forKey: name)
-//                    }
-//                }
-//            }
-//        }
-//
-//    }
-//
-//    func encode(with coder: NSCoder) {
-//        var count: UInt32 = 0
-//        let list = class_copyIvarList(ENUserModel.self, &count)
-//        for i in 0..<Int(count) {
-//            if let iva = list?[i] {
-//                if let cName = ivar_getName(iva) {
-//                    if let name = String(utf8String: cName) {
-//                        //利用KVC取值
-//                        let value = self.value(forKey: name)
-//                        coder.encode(value, forKey: name)
-//                    }
-//                }
-//            }
-//        }
-//    }
 }
 
 class ENUserAccount: Codable {
@@ -197,7 +160,7 @@ class ENUserBindInfo: Codable {
     var type: Int?
 }
 
-// MARK: - 利用runtimef归档解档要求属性s都是OC类型，比较麻烦就不用了
+// MARK: - 利用runtimef归档解档要求属性都是OC类型，比较麻烦就不用了
 //class Person: NSObject, NSCoding {
 //
 //    // MARK: - 自定义属性

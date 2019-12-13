@@ -30,8 +30,15 @@ extension ENApi: TargetType {
         case .postServiceResponse(let path,  _): return path
         }
     }
-    
-    var method: Moya.Method { return .get }
+    /// 如果有其他请求类型再添加即可
+    var method: Moya.Method {
+        switch self {
+        case .getServiceResponse:
+            return .get
+        case .postServiceResponse:
+            return .post
+        }
+    }
         
     var task: Task {
         var parmeters: [String: Any] = [:]
