@@ -16,6 +16,7 @@ pod 'EmptyDataSet-Swift'
 pod 'SwiftMessages'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'MJRefresh'
+pod 'SwifterSwift'
 #snapkit5.0要求iOS10.0以上platform
 pod 'SnapKit', '~> 5.0.0'
 

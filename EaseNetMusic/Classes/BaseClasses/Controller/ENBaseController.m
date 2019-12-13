@@ -14,6 +14,16 @@
 
 @implementation ENBaseController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.en_interactivePopGesZone = -1.0;
+        self.en_interactivePopDisabled = NO;
+        self.en_prefersNavigationBarHidden = NO;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];

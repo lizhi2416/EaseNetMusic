@@ -18,7 +18,14 @@ var isXIphone: Bool {
     return UI_USER_INTERFACE_IDIOM() == .phone && (max(UIScreen.main.bounds.width, UIScreen.main.bounds.height) == 812 || max(UIScreen.main.bounds.width, UIScreen.main.bounds.height) == 896)
 }
 
-let navBarHeight: CGFloat = isXIphone ? 88.0 : 64.0
+let kNavgationHeight: CGFloat = isXIphone ? 88.0 : 64.0
+
+let kNavgationBarHeight: CGFloat = 44.0
+
+let kTopLayoutSafeHeight: CGFloat = isXIphone ? 44.0: 20.0
+
+let kBottomLayoutSafeHeight: CGFloat = isXIphone ? 34.0 : 0.0
+
 
 //获取当前显示的控制器包含模态出来的
 var topVC: UIViewController? {

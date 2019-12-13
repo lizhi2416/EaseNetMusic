@@ -42,6 +42,8 @@ class ENSaveUitil {
 @objc class ENUserModel: NSObject, Codable, NSCoding {
     
     var code: Int?
+    var message: String?
+    
     
     var loginType: Int?
     var account: ENUserAccount?

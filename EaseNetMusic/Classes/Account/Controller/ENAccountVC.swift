@@ -8,23 +8,20 @@
 
 import UIKit
 
-class ENAccountVC: ENBaseController {
+class ENAccountVC: ENCustomNavController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let label = UILabel(frame: CGRect(x: 100, y: 100, width: 200, height: 30))
+        label.backgroundColor = UIColor.theme
+        label.textColor = UIColor.white
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.text = "已登录，待编写界面代码..."
+        self.view.addSubview(label)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

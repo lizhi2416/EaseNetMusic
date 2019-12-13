@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ENMoreVC: ENBaseController {
+class ENMoreVC: ENCustomNavController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

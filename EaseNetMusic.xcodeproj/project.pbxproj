@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		24B474204BCE4F2AD2C25409 /* Pods_EaseNetMusicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E2A2432E5E60015FE1EF8E /* Pods_EaseNetMusicUITests.framework */; };
 		31F93329C89CAFD9DF7E5022 /* Pods_EaseNetMusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F8D0D6C485D8535D6108A9 /* Pods_EaseNetMusicTests.framework */; };
+		345B817823A32331006FFC8A /* ENHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B817323A32330006FFC8A /* ENHttpRequest.swift */; };
+		345B817923A32331006FFC8A /* ENApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B817423A32330006FFC8A /* ENApi.swift */; };
+		345B817A23A32331006FFC8A /* ENEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B817523A32330006FFC8A /* ENEmptyDataSet.swift */; };
+		345B817B23A32331006FFC8A /* ENProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B817623A32330006FFC8A /* ENProgressHud.swift */; };
+		345B817C23A32331006FFC8A /* ENListRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B817723A32331006FFC8A /* ENListRefresh.swift */; };
 		34C0401A23989DEE00A496F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0401923989DEE00A496F8 /* AppDelegate.swift */; };
 		34C0402323989DF100A496F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C0402223989DF100A496F8 /* Assets.xcassets */; };
 		34C0403123989DF100A496F8 /* EaseNetMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0403023989DF100A496F8 /* EaseNetMusicTests.swift */; };
@@ -26,7 +31,6 @@
 		34C04089239F391A00A496F8 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C04082239F391A00A496F8 /* ENTabBarController.swift */; };
 		34C0408A239F391A00A496F8 /* ENCustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C04084239F391A00A496F8 /* ENCustomNavController.swift */; };
 		34C0408B239F391A00A496F8 /* ENBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C04085239F391A00A496F8 /* ENBaseController.m */; };
-		34C0408C239F391A00A496F8 /* ENBackNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C04086239F391A00A496F8 /* ENBackNavController.swift */; };
 		34C0408D239F391A00A496F8 /* ENNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C04087239F391A00A496F8 /* ENNavigationController.swift */; };
 		34C0408F239F393300A496F8 /* ENCustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0408E239F393300A496F8 /* ENCustomNavBar.swift */; };
 		80C50AD1D08E618F21521DAF /* Pods_EaseNetMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */; };
@@ -53,6 +57,11 @@
 		09BCCCD2FAEBDD7786439B63 /* Pods-EaseNetMusicUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusicUITests.release.xcconfig"; path = "Target Support Files/Pods-EaseNetMusicUITests/Pods-EaseNetMusicUITests.release.xcconfig"; sourceTree = "<group>"; };
 		30AEADEB0E161C079BD91ED7 /* Pods-EaseNetMusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusicTests.release.xcconfig"; path = "Target Support Files/Pods-EaseNetMusicTests/Pods-EaseNetMusicTests.release.xcconfig"; sourceTree = "<group>"; };
 		30E2A2432E5E60015FE1EF8E /* Pods_EaseNetMusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EaseNetMusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		345B817323A32330006FFC8A /* ENHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENHttpRequest.swift; sourceTree = "<group>"; };
+		345B817423A32330006FFC8A /* ENApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENApi.swift; sourceTree = "<group>"; };
+		345B817523A32330006FFC8A /* ENEmptyDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENEmptyDataSet.swift; sourceTree = "<group>"; };
+		345B817623A32330006FFC8A /* ENProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENProgressHud.swift; sourceTree = "<group>"; };
+		345B817723A32331006FFC8A /* ENListRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENListRefresh.swift; sourceTree = "<group>"; };
 		34C0401623989DEE00A496F8 /* EaseNetMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EaseNetMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C0401923989DEE00A496F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C0402223989DF100A496F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +87,6 @@
 		34C04083239F391A00A496F8 /* ENBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENBaseController.h; sourceTree = "<group>"; };
 		34C04084239F391A00A496F8 /* ENCustomNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENCustomNavController.swift; sourceTree = "<group>"; };
 		34C04085239F391A00A496F8 /* ENBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENBaseController.m; sourceTree = "<group>"; };
-		34C04086239F391A00A496F8 /* ENBackNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENBackNavController.swift; sourceTree = "<group>"; };
 		34C04087239F391A00A496F8 /* ENNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENNavigationController.swift; sourceTree = "<group>"; };
 		34C0408E239F393300A496F8 /* ENCustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENCustomNavBar.swift; sourceTree = "<group>"; };
 		4339F14DBDE6A43D569E5AC8 /* Pods-EaseNetMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusic.release.xcconfig"; path = "Target Support Files/Pods-EaseNetMusic/Pods-EaseNetMusic.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +213,11 @@
 		34C0404D2399E76500A496F8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				345B817423A32330006FFC8A /* ENApi.swift */,
+				345B817523A32330006FFC8A /* ENEmptyDataSet.swift */,
+				345B817323A32330006FFC8A /* ENHttpRequest.swift */,
+				345B817623A32330006FFC8A /* ENProgressHud.swift */,
+				345B817723A32331006FFC8A /* ENListRefresh.swift */,
 				34C0406A2399F98B00A496F8 /* ENGlobal.swift */,
 			);
 			path = Utils;
@@ -296,12 +309,11 @@
 		34C04081239F391A00A496F8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				34C04082239F391A00A496F8 /* ENTabBarController.swift */,
 				34C04083239F391A00A496F8 /* ENBaseController.h */,
-				34C04084239F391A00A496F8 /* ENCustomNavController.swift */,
 				34C04085239F391A00A496F8 /* ENBaseController.m */,
-				34C04086239F391A00A496F8 /* ENBackNavController.swift */,
+				34C04084239F391A00A496F8 /* ENCustomNavController.swift */,
 				34C04087239F391A00A496F8 /* ENNavigationController.swift */,
+				34C04082239F391A00A496F8 /* ENTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -577,19 +589,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C0406B2399F98B00A496F8 /* ENGlobal.swift in Sources */,
+				345B817B23A32331006FFC8A /* ENProgressHud.swift in Sources */,
 				34C0408A239F391A00A496F8 /* ENCustomNavController.swift in Sources */,
+				345B817823A32331006FFC8A /* ENHttpRequest.swift in Sources */,
 				34C040652399E96800A496F8 /* ENMoreVC.swift in Sources */,
 				34C04089239F391A00A496F8 /* ENTabBarController.swift in Sources */,
 				34C040672399E97500A496F8 /* ENVideoVC.swift in Sources */,
-				34C0408C239F391A00A496F8 /* ENBackNavController.swift in Sources */,
 				34C0401A23989DEE00A496F8 /* AppDelegate.swift in Sources */,
+				345B817923A32331006FFC8A /* ENApi.swift in Sources */,
 				34C04073239DFAF500A496F8 /* ENUserModel.swift in Sources */,
+				345B817A23A32331006FFC8A /* ENEmptyDataSet.swift in Sources */,
 				34C0408D239F391A00A496F8 /* ENNavigationController.swift in Sources */,
 				34C0408F239F393300A496F8 /* ENCustomNavBar.swift in Sources */,
 				34C040612399E94E00A496F8 /* ENDiscoverVC.swift in Sources */,
 				34C04077239E26BE00A496F8 /* ENLoginVC.swift in Sources */,
 				34C04071239DFAAC00A496F8 /* ENAccountVC.swift in Sources */,
 				34C040632399E95C00A496F8 /* ENMineVC.swift in Sources */,
+				345B817C23A32331006FFC8A /* ENListRefresh.swift in Sources */,
 				34C0408B239F391A00A496F8 /* ENBaseController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
