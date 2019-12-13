@@ -99,19 +99,20 @@ class ENLoginVC: ENCustomNavController, UITextFieldDelegate {
     @objc func loginAction() {
         ENProgressHud.showLoading()
         /// 因为菊花不可交互所以直接闭包强引用没关系
-        ENHttpRuquest.loadJsonData(target: ENApi.getServiceResponse(ENLoginApiPath, params: ["phone": (phoneField.text ?? ""), "password": (passwordField.text ?? "")]), Success: { (data) in
-            ENProgressHud.dismiss()
+        ENHttpRuquest.loadData(target: ENApi.getServiceResponse(ENLoginApiPath, params: ["phone": (phoneField.text ?? ""), "password": (passwordField.text ?? "")]), Success: { (data) in
             if let userModel = try? JSONDecoder().decode(ENUserModel.self, from: data) {
                 if let code = userModel.code, code == 200 {
-                    ENProgressHud.showToast(view: self.view, "登录成功")
+                    ENProgressHud.showToast("登录成功")
+                    ENSaveUitil.saveUserModel(userModel.profile)
+                    ENSaveUitil.saveLoginMark(true)
+                    self.navigationController?.popViewController(animated: true)
                 } else {
-                    if let message = userModel.message {
-                        ENProgressHud.showToast(view: self.view, message)
-                    }
+                    ENProgressHud.showToast(userModel.message ?? "登录异常")
                 }
+            } else {
+                ENProgressHud.showToast("登录异常")
             }
         } , Failure: {
-            ENProgressHud.dismiss()
             ENProgressHud.showToast($0.localizedDescription)
         })
     }

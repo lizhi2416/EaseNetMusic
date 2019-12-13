@@ -13,11 +13,16 @@ class ENAccountVC: ENCustomNavController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let profile = ENSaveUitil.getUserModel()
+        
+        let nickName = profile?.nickname ?? ""
+        
+        
         let label = UILabel(frame: CGRect(x: 100, y: 100, width: 200, height: 30))
         label.backgroundColor = UIColor.theme
         label.textColor = UIColor.white
         label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.text = "已登录，待编写界面代码..."
+        label.text = "\(nickName)已登录，待编写界面代码..."
         self.view.addSubview(label)
     }
     

@@ -19,19 +19,21 @@ class ENSaveUitil {
         UserDefaults.standard.synchronize()
     }
         
-    static func saveUserModel(_ user: ENUserModel?) {
-        var myEncodedObject: Data?
-        if let user = user {
-            myEncodedObject = NSKeyedArchiver.archivedData(withRootObject: user)
-        }
-        UserDefaults.standard.setValue(myEncodedObject, forKey: "userModel")
+    static func saveUserModel(_ user: ENUserProfile?) {
+        
+        let data = NSMutableData()
+        let archive = NSKeyedArchiver(forWritingWith: data)
+        archive.encode(user, forKey: "userModelKey")
+        archive.finishEncoding()
+        UserDefaults.standard.setValue(data, forKey: "userModel")
         UserDefaults.standard.synchronize()
     }
     
-    func getUserModel() -> ENUserModel? {
+    static func getUserModel() -> ENUserProfile? {
         let myEncodedData = UserDefaults.standard.object(forKey: "userModel")
         if let data = myEncodedData as? Data {
-            if let user = NSKeyedUnarchiver.unarchiveObject(with: data) as? ENUserModel {
+            let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
+            if let user = unarchiver.decodeObject(forKey: "userModelKey") as? ENUserProfile {
                 return user
             }
         }
@@ -39,11 +41,10 @@ class ENSaveUitil {
     }
 }
 
-@objc class ENUserModel: NSObject, Codable, NSCoding {
+class ENUserModel: Codable {
     
     var code: Int?
     var message: String?
-    
     
     var loginType: Int?
     var account: ENUserAccount?
@@ -51,46 +52,46 @@ class ENSaveUitil {
     var token: String?
     var bindings: [ENUserBindInfo]?
     
-    required init?(coder: NSCoder) {
-        
-        super.init()
-        
-        var count: UInt32 = 0
-        let list = class_copyIvarList(ENUserModel.self, &count)
-        for i in 0..<Int(count) {
-            if let iva = list?[i] {
-                if let cName = ivar_getName(iva) {
-                    if let name = String(utf8String: cName) {
-                        //进行解档取值
-                        let value = coder.decodeObject(forKey: name)
-                        //利用KVC对属性赋值
-                        self.setValue(value, forKey: name)
-                    }
-                }
-            }
-        }
-        
-    }
-    
-    func encode(with coder: NSCoder) {
-        var count: UInt32 = 0
-        let list = class_copyIvarList(ENUserModel.self, &count)
-        for i in 0..<Int(count) {
-            if let iva = list?[i] {
-                if let cName = ivar_getName(iva) {
-                    if let name = String(utf8String: cName) {
-                        //利用KVC取值
-                        let value = self.value(forKey: name)
-                        coder.encode(value, forKey: name)
-                    }
-                }
-            }
-        }
-    }
+//    required init?(coder: NSCoder) {
+//
+//        super.init()
+//
+//        var count: UInt32 = 0
+//        let list = class_copyIvarList(ENUserModel.self, &count)
+//        for i in 0..<Int(count) {
+//            if let iva = list?[i] {
+//                if let cName = ivar_getName(iva) {
+//                    if let name = String(utf8String: cName) {
+//                        //进行解档取值
+//                        let value = coder.decodeObject(forKey: name)
+//                        //利用KVC对属性赋值
+//                        self.setValue(value, forKey: name)
+//                    }
+//                }
+//            }
+//        }
+//
+//    }
+//
+//    func encode(with coder: NSCoder) {
+//        var count: UInt32 = 0
+//        let list = class_copyIvarList(ENUserModel.self, &count)
+//        for i in 0..<Int(count) {
+//            if let iva = list?[i] {
+//                if let cName = ivar_getName(iva) {
+//                    if let name = String(utf8String: cName) {
+//                        //利用KVC取值
+//                        let value = self.value(forKey: name)
+//                        coder.encode(value, forKey: name)
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
 
-@objc class ENUserAccount: NSObject, Codable, NSCoding {
-    var id: Int32?
+class ENUserAccount: Codable {
+    var id: Int?
     var userName: String?
     var type: Int?
     
@@ -98,56 +99,19 @@ class ENSaveUitil {
     var whitelistAuthority: Int?
     var tokenVersion: Int?
     var ban: Int?
-    var createTime: String?
+    var createTime: Int?
     var baoyueVersion: Int?
     var donateVersion: Int?
     var salt: String?
     var vipType: Int?
     var viptypeVersion: Int?
     var anonimousUser: Bool?
-    
-    required init?(coder: NSCoder) {
-        
-        super.init()
-        
-        var count: UInt32 = 0
-        let list = class_copyIvarList(ENUserAccount.self, &count)
-        for i in 0..<Int(count) {
-            if let iva = list?[i] {
-                if let cName = ivar_getName(iva) {
-                    if let name = String(utf8String: cName) {
-                        //进行解档取值
-                        let value = coder.decodeObject(forKey: name)
-                        //利用KVC对属性赋值
-                        self.setValue(value, forKey: name)
-                    }
-                }
-            }
-        }
-        
-    }
-    
-    func encode(with coder: NSCoder) {
-        var count: UInt32 = 0
-        let list = class_copyIvarList(ENUserAccount.self, &count)
-        for i in 0..<Int(count) {
-            if let iva = list?[i] {
-                if let cName = ivar_getName(iva) {
-                    if let name = String(utf8String: cName) {
-                        //利用KVC取值
-                        let value = self.value(forKey: name)
-                        coder.encode(value, forKey: name)
-                    }
-                }
-            }
-        }
-    }
 }
 
-@objc class ENUserProfile: NSObject, Codable, NSCoding {
+class ENUserProfile: NSObject, Codable, NSCoding {
     var defaultAvatar: Bool?
     var avatarUrl: String?
-    var userId: Int32?
+    var userId: Int?
     var vipType: Int?
     var nickname: String?
     var gender: Int?
@@ -158,99 +122,152 @@ class ENSaveUitil {
     var expertTags: String?
     var city: Int?
     var userType: Int?
-    var province: Bool?
+    var province: Int?
     var authStatus: Int?
     var authority: Int?
     var mutual: Bool?
     var followeds: Int?
     var follows: Int?
-    var eventCount: Bool?
+    var eventCount: Int?
     var playlistCount: Int?
     var playlistBeSubscribedCount: Int?
+    var token: String?
+    
     
     required init?(coder: NSCoder) {
+        self.defaultAvatar = coder.decodeObject(forKey: "defaultAvatar") as? Bool
+        self.avatarUrl = coder.decodeObject(forKey: "avatarUrl") as? String
+        self.userId = coder.decodeObject(forKey: "userId") as? Int
+        self.vipType = coder.decodeObject(forKey: "vipType") as? Int
+        self.nickname = coder.decodeObject(forKey: "nickname") as? String
+        self.gender = coder.decodeObject(forKey: "gender") as? Int
+        self.accountStatus = coder.decodeObject(forKey: "accountStatus") as? Int
+        self.backgroundUrl = coder.decodeObject(forKey: "backgroundUrl") as? String
+        self.detailDescription = coder.decodeObject(forKey: "detailDescription") as? String
+        self.remarkName = coder.decodeObject(forKey: "remarkName") as? String
+        self.expertTags = coder.decodeObject(forKey: "expertTags") as? String
         
-        super.init()
-        
-        var count: UInt32 = 0
-        let list = class_copyIvarList(ENUserProfile.self, &count)
-        for i in 0..<Int(count) {
-            if let iva = list?[i] {
-                if let cName = ivar_getName(iva) {
-                    if let name = String(utf8String: cName) {
-                        //进行解档取值
-                        let value = coder.decodeObject(forKey: name)
-                        //利用KVC对属性赋值
-                        self.setValue(value, forKey: name)
-                    }
-                }
-            }
-        }
-        
+        self.city = coder.decodeObject(forKey: "city") as? Int
+        self.userType = coder.decodeObject(forKey: "userType") as? Int
+        self.province = coder.decodeObject(forKey: "province") as? Int
+        self.authority = coder.decodeObject(forKey: "authority") as? Int
+        self.mutual = coder.decodeObject(forKey: "mutual") as? Bool
+        self.followeds = coder.decodeObject(forKey: "followeds") as? Int
+        self.eventCount = coder.decodeObject(forKey: "eventCount") as? Int
+        self.playlistCount = coder.decodeObject(forKey: "playlistCount") as? Int
+        self.playlistBeSubscribedCount = coder.decodeObject(forKey: "playlistBeSubscribedCount") as? Int
+        self.token = coder.decodeObject(forKey: "token") as? String
     }
     
     func encode(with coder: NSCoder) {
-        var count: UInt32 = 0
-        let list = class_copyIvarList(ENUserProfile.self, &count)
-        for i in 0..<Int(count) {
-            if let iva = list?[i] {
-                if let cName = ivar_getName(iva) {
-                    if let name = String(utf8String: cName) {
-                        //利用KVC取值
-                        let value = self.value(forKey: name)
-                        coder.encode(value, forKey: name)
-                    }
-                }
-            }
-        }
+        coder.encode(self.defaultAvatar, forKey: "defaultAvatar")
+        coder.encode(self.avatarUrl, forKey: "avatarUrl")
+        coder.encode(self.userId, forKey: "userId")
+        coder.encode(self.vipType, forKey: "vipType")
+        coder.encode(self.nickname, forKey: "nickname")
+        coder.encode(self.gender, forKey: "gender")
+        coder.encode(self.accountStatus, forKey: "accountStatus")
+        coder.encode(self.backgroundUrl, forKey: "backgroundUrl")
+        coder.encode(self.detailDescription, forKey: "detailDescription")
+        coder.encode(self.remarkName, forKey: "remarkName")
+        coder.encode(self.expertTags, forKey: "expertTags")
+        coder.encode(self.city, forKey: "city")
+        coder.encode(self.userType, forKey: "userType")
+        coder.encode(self.province, forKey: "province")
+        coder.encode(self.authStatus, forKey: "authStatus")
+        coder.encode(self.authority, forKey: "authority")
+        coder.encode(self.mutual, forKey: "mutual")
+        coder.encode(self.followeds, forKey: "followeds")
+        coder.encode(self.eventCount, forKey: "authority")
+        coder.encode(self.playlistCount, forKey: "playlistCount")
+        coder.encode(self.playlistBeSubscribedCount, forKey: "playlistBeSubscribedCount")
+        coder.encode(self.token, forKey: "token")
     }
 }
 
-@objc class ENUserBindInfo: NSObject, Codable, NSCoding {
+class ENUserBindInfo: Codable {
     var expired: Bool?
     var url: String?
-    var userId: Int32?
+    var userId: Int?
     var tokenJsonStr: String?
-    var bindingTime: Int32?
-    var expiresIn: Int32?
-    var refreshTime: Int32?
-    var id: Int32?
+    var bindingTime: Int?
+    var expiresIn: Int?
+    var refreshTime: Int?
+    var id: Int?
     var type: Int?
-    
-    required init?(coder: NSCoder) {
-        
-        super.init()
-        
-        var count: UInt32 = 0
-        let list = class_copyIvarList(ENUserBindInfo.self, &count)
-        for i in 0..<Int(count) {
-            if let iva = list?[i] {
-                if let cName = ivar_getName(iva) {
-                    if let name = String(utf8String: cName) {
-                        //进行解档取值
-                        let value = coder.decodeObject(forKey: name)
-                        //利用KVC对属性赋值
-                        self.setValue(value, forKey: name)
-                    }
-                }
-            }
-        }
-        
-    }
-    
-    func encode(with coder: NSCoder) {
-        var count: UInt32 = 0
-        let list = class_copyIvarList(ENUserBindInfo.self, &count)
-        for i in 0..<Int(count) {
-            if let iva = list?[i] {
-                if let cName = ivar_getName(iva) {
-                    if let name = String(utf8String: cName) {
-                        //利用KVC取值
-                        let value = self.value(forKey: name)
-                        coder.encode(value, forKey: name)
-                    }
-                }
-            }
-        }
-    }
 }
+
+// MARK: - 利用runtimef归档解档要求属性s都是OC类型，比较麻烦就不用了
+//class Person: NSObject, NSCoding {
+//
+//    // MARK: - 自定义属性
+//    @objc var age: NSInteger = 0                    //年龄
+//    @objc var name: NSString?                       //姓名
+//    @objc var height: CGFloat = 0.0                 //性别
+//
+//    // MARK: - 系统回调函数
+//    override init() {
+//        super.init()
+//    }
+//
+//    // MARK: - 归档与解档
+////    归档
+//    func encode(with aCoder: NSCoder) {
+//        let a: JSONSerialization = <#value#>
+//
+////        1.获取所有属性
+////        1.1.创建保存属性个数的变量
+//        var count: UInt32 = 0
+////        1.2.获取变量的指针
+//        let outCount: UnsafeMutablePointer<UInt32> = withUnsafeMutablePointer(to: &count) { (outCount: UnsafeMutablePointer<UInt32>) -> UnsafeMutablePointer<UInt32> in
+//            return outCount
+//        }
+////        1.3.获取属性数组
+//        let ivars = class_copyIvarList(Person.self, outCount)
+//        for i in 0..<outCount.pointee {
+////            2.获取键值对
+////            2.1.获取ivars中的值
+//            let ivar = ivars![Int(i)];
+////            2.2.获取键
+//            let ivarKey = String(cString: ivar_getName(ivar)!)
+////            2.3.获取值
+//            let ivarValue = value(forKey: ivarKey)
+//
+////            3.归档
+//            aCoder.encode(ivarValue, forKey: ivarKey)
+//        }
+//
+////        4.释放内存
+//        free(ivars)
+//    }
+//
+////    解档
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init()
+//
+////        1.获取所有属性
+////        1.1.创建保存属性个数的变量
+//        var count: UInt32 = 0
+////        1.2.获取变量的指针
+//        let outCount = withUnsafeMutablePointer(to: &count) { (outCount: UnsafeMutablePointer<UInt32>) -> UnsafeMutablePointer<UInt32> in
+//            return outCount
+//        }
+////        1.3.获取属性数组
+//        let ivars = class_copyIvarList(Person.self, outCount)
+//        for i in 0..<count {
+////            2.获取键值对
+////            2.1.获取ivars中的值
+//            let ivar = ivars![Int(i)]
+////            2.2.获取键
+//            let ivarKey = String(cString: ivar_getName(ivar)!)
+////            2.3.获取值
+//            let ivarValue = aDecoder.decodeObject(forKey: ivarKey)
+//
+////            3.设置属性的值
+//            setValue(ivarValue, forKey: ivarKey)
+//        }
+//
+////        4.释放内存
+//        free(ivars)
+//    }
+//
