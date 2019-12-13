@@ -101,8 +101,10 @@ class ENLoginVC: ENCustomNavController, UITextFieldDelegate {
         /// 因为菊花不可交互所以直接闭包强引用没关系
         ENHttpRuquest.loadData(target: ENApi.getServiceResponse(ENLoginApiPath, params: ["phone": (phoneField.text ?? ""), "password": (passwordField.text ?? "")]), Success: { (data) in
             if let userModel = try? JSONDecoder().decode(ENUserModel.self, from: data) {
+                ENProgressHud.dismiss()
                 if let code = userModel.code, code == 200 {
                     ENProgressHud.showToast("登录成功")
+                    userModel.profile?.token = userModel.token
                     ENSaveUitil.saveUserModel(userModel.profile)
                     ENSaveUitil.saveLoginMark(true)
                     self.navigationController?.popViewController(animated: true)
@@ -113,6 +115,7 @@ class ENLoginVC: ENCustomNavController, UITextFieldDelegate {
                 ENProgressHud.showToast("登录异常")
             }
         } , Failure: {
+            ENProgressHud.dismiss()
             ENProgressHud.showToast($0.localizedDescription)
         })
     }
