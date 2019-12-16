@@ -33,6 +33,9 @@
 		34C0408B239F391A00A496F8 /* ENBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C04085239F391A00A496F8 /* ENBaseController.m */; };
 		34C0408D239F391A00A496F8 /* ENNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C04087239F391A00A496F8 /* ENNavigationController.swift */; };
 		34C0408F239F393300A496F8 /* ENCustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0408E239F393300A496F8 /* ENCustomNavBar.swift */; };
+		34E0952D23A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0952A23A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.m */; };
+		34E0952E23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0952B23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m */; };
+		34E0952F23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0952C23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m */; };
 		80C50AD1D08E618F21521DAF /* Pods_EaseNetMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +92,12 @@
 		34C04085239F391A00A496F8 /* ENBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENBaseController.m; sourceTree = "<group>"; };
 		34C04087239F391A00A496F8 /* ENNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENNavigationController.swift; sourceTree = "<group>"; };
 		34C0408E239F393300A496F8 /* ENCustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENCustomNavBar.swift; sourceTree = "<group>"; };
+		34E0952723A72D5E00FC8790 /* NAKPlaybackIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAKPlaybackIndicatorView.h; sourceTree = "<group>"; };
+		34E0952823A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAKPlaybackIndicatorContentView.h; sourceTree = "<group>"; };
+		34E0952923A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAKPlaybackIndicatorViewStyle.h; sourceTree = "<group>"; };
+		34E0952A23A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAKPlaybackIndicatorContentView.m; sourceTree = "<group>"; };
+		34E0952B23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAKPlaybackIndicatorView.m; sourceTree = "<group>"; };
+		34E0952C23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAKPlaybackIndicatorViewStyle.m; sourceTree = "<group>"; };
 		4339F14DBDE6A43D569E5AC8 /* Pods-EaseNetMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusic.release.xcconfig"; path = "Target Support Files/Pods-EaseNetMusic/Pods-EaseNetMusic.release.xcconfig"; sourceTree = "<group>"; };
 		73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EaseNetMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B63B57E5B56688087791A32 /* Pods-EaseNetMusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-EaseNetMusicUITests/Pods-EaseNetMusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +207,7 @@
 		34C0404B2399E76500A496F8 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				34E0952623A72D5E00FC8790 /* NAKPlaybackIndicatorView */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -323,6 +333,19 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		34E0952623A72D5E00FC8790 /* NAKPlaybackIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				34E0952823A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.h */,
+				34E0952A23A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.m */,
+				34E0952723A72D5E00FC8790 /* NAKPlaybackIndicatorView.h */,
+				34E0952B23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m */,
+				34E0952923A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.h */,
+				34E0952C23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m */,
+			);
+			path = NAKPlaybackIndicatorView;
 			sourceTree = "<group>";
 		};
 		BDE3D354F812B56A51CF3EE6 /* Frameworks */ = {
@@ -596,6 +619,8 @@
 				34C04089239F391A00A496F8 /* ENTabBarController.swift in Sources */,
 				34C040672399E97500A496F8 /* ENVideoVC.swift in Sources */,
 				34C0401A23989DEE00A496F8 /* AppDelegate.swift in Sources */,
+				34E0952F23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m in Sources */,
+				34E0952D23A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.m in Sources */,
 				345B817923A32331006FFC8A /* ENApi.swift in Sources */,
 				34C04073239DFAF500A496F8 /* ENUserModel.swift in Sources */,
 				345B817A23A32331006FFC8A /* ENEmptyDataSet.swift in Sources */,
@@ -603,6 +628,7 @@
 				34C0408F239F393300A496F8 /* ENCustomNavBar.swift in Sources */,
 				34C040612399E94E00A496F8 /* ENDiscoverVC.swift in Sources */,
 				34C04077239E26BE00A496F8 /* ENLoginVC.swift in Sources */,
+				34E0952E23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m in Sources */,
 				34C04071239DFAAC00A496F8 /* ENAccountVC.swift in Sources */,
 				34C040632399E95C00A496F8 /* ENMineVC.swift in Sources */,
 				345B817C23A32331006FFC8A /* ENListRefresh.swift in Sources */,

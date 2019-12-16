@@ -4,6 +4,8 @@ PODS:
   - Kingfisher (5.11.0):
     - Kingfisher/Core (= 5.11.0)
   - Kingfisher/Core (5.11.0)
+  - LLCycleScrollView (1.6.0):
+    - Kingfisher
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.2.3)
   - Moya (13.0.1):
@@ -48,6 +50,7 @@ PODS:
 DEPENDENCIES:
   - EmptyDataSet-Swift
   - Kingfisher
+  - LLCycleScrollView
   - MBProgressHUD
   - MJRefresh
   - Moya
@@ -63,6 +66,7 @@ SPEC REPOS:
     - Alamofire
     - EmptyDataSet-Swift
     - Kingfisher
+    - LLCycleScrollView
     - MBProgressHUD
     - MJRefresh
     - Moya
@@ -78,6 +82,7 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   Kingfisher: 4569606189149e19c7d9439f47e885d0679b7a90
+  LLCycleScrollView: a08f666671f9fd1a205df9defebc3c217d59abc8
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: 2b1214a2dc8f4df4c5dcb028ea2ad4e245425fb7
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
@@ -89,6 +94,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
 
-PODFILE CHECKSUM: 5324afb713b9fdd033cb732136be8893c3f55dbd
+PODFILE CHECKSUM: f9c124b4b4580bbd091ee869e83924d48c9962e3
 
 COCOAPODS: 1.7.1
