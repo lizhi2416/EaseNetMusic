@@ -26,8 +26,7 @@
 		34C04071239DFAAC00A496F8 /* ENAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0406E239DFAAC00A496F8 /* ENAccountVC.swift */; };
 		34C04073239DFAF500A496F8 /* ENUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C04072239DFAF500A496F8 /* ENUserModel.swift */; };
 		34C04077239E26BE00A496F8 /* ENLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C04076239E26BE00A496F8 /* ENLoginVC.swift */; };
-		34C04079239F2ED200A496F8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C04078239F2ED200A496F8 /* Launch Screen.storyboard */; };
-		34C0407B239F30B300A496F8 /* LaunchScreenImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C0407A239F30B200A496F8 /* LaunchScreenImage.png */; };
+		34C0407B239F30B300A496F8 /* StartScreenImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C0407A239F30B200A496F8 /* StartScreenImage.png */; };
 		34C04089239F391A00A496F8 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C04082239F391A00A496F8 /* ENTabBarController.swift */; };
 		34C0408A239F391A00A496F8 /* ENCustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C04084239F391A00A496F8 /* ENCustomNavController.swift */; };
 		34C0408B239F391A00A496F8 /* ENBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C04085239F391A00A496F8 /* ENBaseController.m */; };
@@ -36,6 +35,7 @@
 		34E0952D23A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0952A23A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.m */; };
 		34E0952E23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0952B23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m */; };
 		34E0952F23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0952C23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m */; };
+		34E0953123A761B400FC8790 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34E0953023A761B400FC8790 /* Launch Screen.storyboard */; };
 		80C50AD1D08E618F21521DAF /* Pods_EaseNetMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,8 +84,7 @@
 		34C0406E239DFAAC00A496F8 /* ENAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENAccountVC.swift; sourceTree = "<group>"; };
 		34C04072239DFAF500A496F8 /* ENUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENUserModel.swift; sourceTree = "<group>"; };
 		34C04076239E26BE00A496F8 /* ENLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENLoginVC.swift; sourceTree = "<group>"; };
-		34C04078239F2ED200A496F8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		34C0407A239F30B200A496F8 /* LaunchScreenImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenImage.png; sourceTree = "<group>"; };
+		34C0407A239F30B200A496F8 /* StartScreenImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartScreenImage.png; sourceTree = "<group>"; };
 		34C04082239F391A00A496F8 /* ENTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
 		34C04083239F391A00A496F8 /* ENBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENBaseController.h; sourceTree = "<group>"; };
 		34C04084239F391A00A496F8 /* ENCustomNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENCustomNavController.swift; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		34E0952A23A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAKPlaybackIndicatorContentView.m; sourceTree = "<group>"; };
 		34E0952B23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAKPlaybackIndicatorView.m; sourceTree = "<group>"; };
 		34E0952C23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAKPlaybackIndicatorViewStyle.m; sourceTree = "<group>"; };
+		34E0953023A761B400FC8790 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4339F14DBDE6A43D569E5AC8 /* Pods-EaseNetMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusic.release.xcconfig"; path = "Target Support Files/Pods-EaseNetMusic/Pods-EaseNetMusic.release.xcconfig"; sourceTree = "<group>"; };
 		73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EaseNetMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B63B57E5B56688087791A32 /* Pods-EaseNetMusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-EaseNetMusicUITests/Pods-EaseNetMusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 				34C0402223989DF100A496F8 /* Assets.xcassets */,
 				34C0402723989DF100A496F8 /* Info.plist */,
 				34C040592399E90E00A496F8 /* EaseNetMusic-Bridging-Header.h */,
-				34C0407A239F30B200A496F8 /* LaunchScreenImage.png */,
-				34C04078239F2ED200A496F8 /* Launch Screen.storyboard */,
+				34C0407A239F30B200A496F8 /* StartScreenImage.png */,
+				34E0953023A761B400FC8790 /* Launch Screen.storyboard */,
 			);
 			path = EaseNetMusic;
 			sourceTree = "<group>";
@@ -481,9 +481,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C04079239F2ED200A496F8 /* Launch Screen.storyboard in Resources */,
+				34E0953123A761B400FC8790 /* Launch Screen.storyboard in Resources */,
 				34C0402323989DF100A496F8 /* Assets.xcassets in Resources */,
-				34C0407B239F30B300A496F8 /* LaunchScreenImage.png in Resources */,
+				34C0407B239F30B300A496F8 /* StartScreenImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

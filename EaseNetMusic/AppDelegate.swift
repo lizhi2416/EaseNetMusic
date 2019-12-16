@@ -14,13 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         UITextField.appearance().tintColor = UIColor.theme
-        
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         window?.rootViewController = ENTabBarController()
         window?.makeKeyAndVisible()
+        
+//        Thread.sleep(forTimeInterval: 3)
+        
         return true
     }
 
