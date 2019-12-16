@@ -65,6 +65,13 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
             stateValue = 0
         }
         playHud.state = NAKPlaybackIndicatorViewState(rawValue: stateValue)!
+        
+        ENHttpRuquest.loadJsonData(target: ENApi.getServiceResponse(ENGetRecommendMusicListPath, params: nil), Success: { (json) in
+            
+        }, Failure: { (error) in
+            
+        })
+        
         return false
     }
     

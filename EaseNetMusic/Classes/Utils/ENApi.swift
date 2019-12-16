@@ -10,13 +10,22 @@ import Foundation
 import Moya
 
 let ENLoginApiPath = "login/cellphone"
-
+/// ?type=2
+let ENGetBannerListPath = "banner"
+/// 需要登录
+let ENGetRecommendMusicListPath = "recommend/resource"
+/// 首页新碟数据
+let ENHomeNewestAlbumList = "album/newest"
+/// ?type=96全部:0华语:7欧美:96日本:8韩国:16
+let ENHomeNewSongRecommendList = "top/song"
+/// 云村
+let ENHomeHotwallList = "/comment/hotwall/list"
 
 enum ENApi {
     /// 所有get请求
-    case getServiceResponse(_ path: String, params: [String: Any])
+    case getServiceResponse(_ path: String, params: [String: Any]?)
     /// 所有post请求
-    case postServiceResponse(_ path: String, params: [String: Any])
+    case postServiceResponse(_ path: String, params: [String: Any]?)
 }
 
 extension ENApi: TargetType {
@@ -44,12 +53,16 @@ extension ENApi: TargetType {
         var parmeters: [String: Any] = [:]
         switch self {
         case .getServiceResponse(_, let params):
-            for (key, value) in params {
-                parmeters[key] = value
+            if let params = params {
+                for (key, value) in params {
+                    parmeters[key] = value
+                }
             }
         case .postServiceResponse(_, let params):
-            for (key, value) in params {
-                parmeters[key] = value
+            if let params = params {
+                for (key, value) in params {
+                    parmeters[key] = value
+                }
             }
         }
         return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)

@@ -107,6 +107,7 @@ class ENLoginVC: ENCustomNavController, UITextFieldDelegate {
                     userModel.profile?.token = userModel.token
                     ENSaveUitil.saveUserModel(userModel.profile)
                     ENSaveUitil.saveLoginMark(true)
+                    self.saveLoginCookies()
                     self.navigationController?.popViewController(animated: true)
                 } else {
                     ENProgressHud.showToast(userModel.message ?? "登录异常")
@@ -118,6 +119,14 @@ class ENLoginVC: ENCustomNavController, UITextFieldDelegate {
             ENProgressHud.dismiss()
             ENProgressHud.showToast($0.localizedDescription)
         })
+    }
+    
+    func saveLoginCookies() {
+        if let cookies = HTTPCookieStorage.shared.cookies {
+            let cookiesData = NSKeyedArchiver.archivedData(withRootObject: cookies)
+            UserDefaults.standard.set(cookiesData, forKey: "loginCookiesData")
+        }
+        
     }
     
     @objc func textDidChange(_ textField: UITextField) {
