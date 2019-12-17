@@ -71,7 +71,7 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
         ENHttpRuquest.loadJsonData(target: ENApi.getServiceResponse(ENGetRecommendMusicListPath, params: nil), Success: { [weak self] (json) in
             self?.recommentMusicListJson = json
             group.leave()
-        }, Failure: { (error) in
+        }, Failure: { (_) in
             group.leave()
         })
         
@@ -79,7 +79,7 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
         ENHttpRuquest.loadJsonData(target: ENApi.getServiceResponse(ENGetBannerListPath, params: ["type": 2]), Success: { [weak self] (json) in
             self?.bannerJson = json
             group.leave()
-        }, Failure: { (error) in
+        }, Failure: { (_) in
             group.leave()
         })
         
@@ -87,7 +87,7 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
         ENHttpRuquest.loadJsonData(target: ENApi.getServiceResponse(ENHomeNewestAlbumList, params: nil), Success: { [weak self] (json) in
             self?.newestAlbumJson = json
             group.leave()
-        }, Failure: { (error) in
+        }, Failure: { (_) in
             group.leave()
         })
         
@@ -95,7 +95,7 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
         ENHttpRuquest.loadJsonData(target: ENApi.getServiceResponse(ENHomeHotwallList, params: nil), Success: { [weak self] (json) in
             self?.hotWallJson = json
             group.leave()
-        }, Failure: { (error) in
+        }, Failure: { (_) in
             group.leave()
         })
 
@@ -256,7 +256,7 @@ extension ENDiscoverVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
                         var imageTitles = [String]()
                         if let banners = bannerData["banners"].array {
                             banners.forEach { (banner) in
-                                var imageUrl = banner["pic"].stringValue.httpsImageUrl
+                                let imageUrl = banner["pic"].stringValue.httpsImageUrl
                                 imageTitles.append(banner["typeTitle"].stringValue)
                                 imagePaths.append(imageUrl)
                             }
