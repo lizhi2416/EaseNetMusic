@@ -36,6 +36,8 @@
 		34E0952E23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0952B23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m */; };
 		34E0952F23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E0952C23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m */; };
 		34E0953123A761B400FC8790 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34E0953023A761B400FC8790 /* Launch Screen.storyboard */; };
+		34E0953423A8712200FC8790 /* ENDiscoverCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0953223A8712200FC8790 /* ENDiscoverCVCell.swift */; };
+		34E0953723A87F4800FC8790 /* ENDiscoverHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0953623A87F4800FC8790 /* ENDiscoverHeaderReusableView.swift */; };
 		80C50AD1D08E618F21521DAF /* Pods_EaseNetMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,8 @@
 		34E0952B23A72D5E00FC8790 /* NAKPlaybackIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAKPlaybackIndicatorView.m; sourceTree = "<group>"; };
 		34E0952C23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAKPlaybackIndicatorViewStyle.m; sourceTree = "<group>"; };
 		34E0953023A761B400FC8790 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		34E0953223A8712200FC8790 /* ENDiscoverCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENDiscoverCVCell.swift; sourceTree = "<group>"; };
+		34E0953623A87F4800FC8790 /* ENDiscoverHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENDiscoverHeaderReusableView.swift; sourceTree = "<group>"; };
 		4339F14DBDE6A43D569E5AC8 /* Pods-EaseNetMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusic.release.xcconfig"; path = "Target Support Files/Pods-EaseNetMusic/Pods-EaseNetMusic.release.xcconfig"; sourceTree = "<group>"; };
 		73B9CDD89DDFF6553A1B3B35 /* Pods_EaseNetMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EaseNetMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B63B57E5B56688087791A32 /* Pods-EaseNetMusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseNetMusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-EaseNetMusicUITests/Pods-EaseNetMusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				34C040602399E94E00A496F8 /* ENDiscoverVC.swift */,
+				34E0953223A8712200FC8790 /* ENDiscoverCVCell.swift */,
+				34E0953623A87F4800FC8790 /* ENDiscoverHeaderReusableView.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -617,6 +623,7 @@
 				345B817823A32331006FFC8A /* ENHttpRequest.swift in Sources */,
 				34C040652399E96800A496F8 /* ENMoreVC.swift in Sources */,
 				34C04089239F391A00A496F8 /* ENTabBarController.swift in Sources */,
+				34E0953723A87F4800FC8790 /* ENDiscoverHeaderReusableView.swift in Sources */,
 				34C040672399E97500A496F8 /* ENVideoVC.swift in Sources */,
 				34C0401A23989DEE00A496F8 /* AppDelegate.swift in Sources */,
 				34E0952F23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m in Sources */,
@@ -632,6 +639,7 @@
 				34C04071239DFAAC00A496F8 /* ENAccountVC.swift in Sources */,
 				34C040632399E95C00A496F8 /* ENMineVC.swift in Sources */,
 				345B817C23A32331006FFC8A /* ENListRefresh.swift in Sources */,
+				34E0953423A8712200FC8790 /* ENDiscoverCVCell.swift in Sources */,
 				34C0408B239F391A00A496F8 /* ENBaseController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

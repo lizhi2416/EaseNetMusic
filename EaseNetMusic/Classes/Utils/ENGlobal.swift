@@ -79,6 +79,17 @@ extension DispatchQueue {
     }
 }
 
+extension String {
+    var httpsImageUrl: String {
+        if !self.contains("https") {
+            if self.contains("http") {
+                return self.replacingOccurrences(of: "http", with: "https")
+            }
+        }
+        return self
+    }
+}
+
 extension UIColor {
     class var background: UIColor {
         return UIColor.white
