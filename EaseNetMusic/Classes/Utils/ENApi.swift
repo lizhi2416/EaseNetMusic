@@ -19,7 +19,12 @@ let ENHomeNewestAlbumList = "album/newest"
 /// ?type=96全部:0华语:7欧美:96日本:8韩国:16
 let ENHomeNewSongRecommendList = "top/song"
 /// 云村
-let ENHomeHotwallList = "/comment/hotwall/list"
+let ENHomeHotwallList = "comment/hotwall/list"
+/// MV
+let ENHomeRecommendMVList = "personalized/mv"
+/// 每日推荐歌曲需要登录
+let ENDailyRecommendMusicSongs = "recommend/songs"
+
 
 enum ENApi {
     /// 所有get请求
@@ -50,7 +55,8 @@ extension ENApi: TargetType {
     }
         
     var task: Task {
-        var parmeters: [String: Any] = [:]
+//        timestamp=1503019930000
+        var parmeters: [String: Any] = ["timestamp": Date().timeIntervalSince1970]
         switch self {
         case .getServiceResponse(_, let params):
             if let params = params {

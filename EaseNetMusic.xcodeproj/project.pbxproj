@@ -14,6 +14,8 @@
 		345B817A23A32331006FFC8A /* ENEmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B817523A32330006FFC8A /* ENEmptyDataSet.swift */; };
 		345B817B23A32331006FFC8A /* ENProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B817623A32330006FFC8A /* ENProgressHud.swift */; };
 		345B817C23A32331006FFC8A /* ENListRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B817723A32331006FFC8A /* ENListRefresh.swift */; };
+		34815A6123AB00F30057A99D /* ENDailyRecommendListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34815A6023AB00F30057A99D /* ENDailyRecommendListVC.swift */; };
+		34815A6323AB02900057A99D /* ENMusicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34815A6223AB02900057A99D /* ENMusicInfo.swift */; };
 		34C0401A23989DEE00A496F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0401923989DEE00A496F8 /* AppDelegate.swift */; };
 		34C0402323989DF100A496F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C0402223989DF100A496F8 /* Assets.xcassets */; };
 		34C0403123989DF100A496F8 /* EaseNetMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C0403023989DF100A496F8 /* EaseNetMusicTests.swift */; };
@@ -67,6 +69,8 @@
 		345B817523A32330006FFC8A /* ENEmptyDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENEmptyDataSet.swift; sourceTree = "<group>"; };
 		345B817623A32330006FFC8A /* ENProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENProgressHud.swift; sourceTree = "<group>"; };
 		345B817723A32331006FFC8A /* ENListRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENListRefresh.swift; sourceTree = "<group>"; };
+		34815A6023AB00F30057A99D /* ENDailyRecommendListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENDailyRecommendListVC.swift; sourceTree = "<group>"; };
+		34815A6223AB02900057A99D /* ENMusicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENMusicInfo.swift; sourceTree = "<group>"; };
 		34C0401623989DEE00A496F8 /* EaseNetMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EaseNetMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C0401923989DEE00A496F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C0402223989DF100A496F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 				34C040602399E94E00A496F8 /* ENDiscoverVC.swift */,
 				34E0953223A8712200FC8790 /* ENDiscoverCVCell.swift */,
 				34E0953623A87F4800FC8790 /* ENDiscoverHeaderReusableView.swift */,
+				34815A6023AB00F30057A99D /* ENDailyRecommendListVC.swift */,
+				34815A6223AB02900057A99D /* ENMusicInfo.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -626,10 +632,12 @@
 				34E0953723A87F4800FC8790 /* ENDiscoverHeaderReusableView.swift in Sources */,
 				34C040672399E97500A496F8 /* ENVideoVC.swift in Sources */,
 				34C0401A23989DEE00A496F8 /* AppDelegate.swift in Sources */,
+				34815A6123AB00F30057A99D /* ENDailyRecommendListVC.swift in Sources */,
 				34E0952F23A72D5E00FC8790 /* NAKPlaybackIndicatorViewStyle.m in Sources */,
 				34E0952D23A72D5E00FC8790 /* NAKPlaybackIndicatorContentView.m in Sources */,
 				345B817923A32331006FFC8A /* ENApi.swift in Sources */,
 				34C04073239DFAF500A496F8 /* ENUserModel.swift in Sources */,
+				34815A6323AB02900057A99D /* ENMusicInfo.swift in Sources */,
 				345B817A23A32331006FFC8A /* ENEmptyDataSet.swift in Sources */,
 				34C0408D239F391A00A496F8 /* ENNavigationController.swift in Sources */,
 				34C0408F239F393300A496F8 /* ENCustomNavBar.swift in Sources */,

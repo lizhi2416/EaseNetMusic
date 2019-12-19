@@ -18,7 +18,7 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
     var bannerJson: JSON?
     var recommentMusicListJson: JSON?
     var newestAlbumJson: JSON?
-    var hotWallJson: JSON?
+    var mvListJson: JSON?
     let sectionData: [(String, String)] = [("推荐歌单", "歌单广场"), ("新歌", "更多新歌"), ("云村精选", "获取新内容")]
     
     var loadHud = UIActivityIndicatorView(style: .gray)
@@ -92,8 +92,8 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
         })
         
         group.enter()
-        ENHttpRuquest.loadJsonData(target: ENApi.getServiceResponse(ENHomeHotwallList, params: nil), Success: { [weak self] (json) in
-            self?.hotWallJson = json
+        ENHttpRuquest.loadJsonData(target: ENApi.getServiceResponse(ENHomeRecommendMVList, params: nil), Success: { [weak self] (json) in
+            self?.mvListJson = json
             group.leave()
         }, Failure: { (_) in
             group.leave()
@@ -111,7 +111,7 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
         collectionView.headerEndRefreshing()
         loadHud.stopAnimating()
         if collectionView.superview == nil {
-            if bannerJson == nil && recommentMusicListJson == nil && newestAlbumJson == nil && hotWallJson == nil {
+            if bannerJson == nil && recommentMusicListJson == nil && newestAlbumJson == nil && mvListJson == nil {
                 self.view.addSubview(loadFailBtn)
                 loadFailBtn.snp.makeConstraints { (make) in
                     make.center.equalToSuperview()
@@ -122,14 +122,13 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
         loadFailBtn.removeSubviews()
         if collectionView.superview == nil {
             collectionView.register(ENDiscoverCVCell.self, forCellWithReuseIdentifier: "ENDiscoverCVCell")
+            collectionView.register(ENDiscoverMVListCell.self, forCellWithReuseIdentifier: "ENDiscoverMVListCell")
             collectionView.register(ENDiscoverHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ENDiscoverHeaderReusableView")
             collectionView.delegate = self
             collectionView.dataSource = self
             collectionView.setPullRefreshBlock(pullHeader: { [weak self] in
                 self?.loadHomeNetData()
-            }, pullFooter: {
-                
-            })
+            }, pullFooter: nil)
             self.view.addSubview(collectionView)
             collectionView.snp.makeConstraints { (make) in
                 make.top.equalTo(self.navBar.snp.bottom)
@@ -147,6 +146,17 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
     }
     func didSelectBanner(index: Int) {
         
+    }
+    @objc func clickToolBarBtn(_ btn: UIControl) {
+        if btn.tag == 100 {
+            self.navigationController?.pushViewController(ENDailyRecommendListVC(), animated: true)
+        } else if btn.tag == 101 {
+            
+        } else if btn.tag == 102 {
+            
+        } else if btn.tag == 103 {
+            
+        }
     }
 // MARK: - override super
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -208,28 +218,46 @@ extension ENDiscoverVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 6
+        if self.recommentMusicListJson?["code"].int == 200 {
+            if let recommends = self.recommentMusicListJson?["recommend"].array {
+                return recommends.count > 6 ? 6 : recommends.count
+            }
+        }
+            return 0
         case 1:
-            return 3
+        if self.newestAlbumJson?["code"].int == 200 {
+            if let albums = self.newestAlbumJson?["albums"].array {
+                return albums.count > 3 ? 3 : albums.count
+            }
+        }
+            return 0
         case 2:
-            return 5
+        if self.mvListJson?["code"].int == 200 {
+            if let result = self.mvListJson?["result"].array {
+                return result.count > 5 ? 5 : result.count
+            }
+        }
+            return 0
         default:
             return 0
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ENDiscoverCVCell", for: indexPath)
-        if let cell = cell as? ENDiscoverCVCell {
-            if indexPath.section == 0 {
+        if indexPath.section == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ENDiscoverCVCell", for: indexPath)
+            if let cell = cell as? ENDiscoverCVCell {
                 if self.recommentMusicListJson?["code"].int == 200 {
                     if let recommend = self.recommentMusicListJson?["recommend"].array {
                         cell.imageView.kf.setImage(with: URL(string: recommend[indexPath.item]["picUrl"].stringValue.httpsImageUrl), placeholder: UIImage(named: "cm2_default_edit_80"))
                         cell.titleLabel.text = recommend[indexPath.item]["name"].stringValue
                     }
                 }
-                
-            } else if indexPath.section == 1 {
+            }
+            return cell
+        } else if indexPath.section == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ENDiscoverCVCell", for: indexPath)
+            if let cell = cell as? ENDiscoverCVCell {
                 if self.newestAlbumJson?["code"].int == 200 {
                     if let albums = self.newestAlbumJson?["albums"].array {
                         cell.imageView.kf.setImage(with: URL(string: albums[indexPath.item]["picUrl"].stringValue.httpsImageUrl), placeholder: UIImage(named: "cm2_default_edit_80"))
@@ -237,8 +265,19 @@ extension ENDiscoverVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
                     }
                 }
             }
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ENDiscoverMVListCell", for: indexPath)
+            if let cell = cell as? ENDiscoverMVListCell {
+                if self.mvListJson?["code"].int == 200 {
+                    if let result = self.mvListJson?["result"].array {
+                        cell.imageView.kf.setImage(with: URL(string: result[indexPath.item]["picUrl"].stringValue.httpsImageUrl), placeholder: UIImage(named: "cm4_tvc_video_default_night"))
+                        cell.titleLabel.text = result[indexPath.item]["copywriter"].stringValue
+                    }
+                }
+            }
+            return cell
         }
-        return cell
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -249,7 +288,7 @@ extension ENDiscoverVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ENDiscoverHeaderReusableView", for: indexPath)
         if let reusableHeader = header as? ENDiscoverHeaderReusableView {
             if indexPath.section == 0 {
-                self.bannerView.frame = CGRect(x: 0, y: 15, width: kScreenWidth, height: kScreenWidth * 7.0 / 18.0)
+                self.bannerView.frame = CGRect(x: 0, y: 15, width: kScreenWidth, height: kScreenWidth / 3.0)
                 if let bannerData = bannerJson {
                     if bannerData["code"].int == 200 {
                         var imagePaths = [String]()
@@ -266,6 +305,23 @@ extension ENDiscoverVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
                     }
                 }
                 header.addSubview(self.bannerView)
+                
+                let toolTitles = ["每日推荐", "歌单", "排行榜", "电台", "直播"]
+                for (index, title) in toolTitles.enumerated() {
+                    let btn = UIControl(frame: CGRect(x: CGFloat(index) * kScreenWidth / 5.0, y: kScreenWidth / 3.0 + 30.0, width: kScreenWidth / 5.0, height: 80))
+                    btn.tag = 100 + index
+                    let imageView = UIImageView(frame: CGRect(x: (kScreenWidth / 5.0 - 50)/2.0, y: 5.0, width: 50, height: 50))
+                    imageView.image = UIImage(named: "cm5_set_icn_miniapp_pri_fm")
+                    let titleLabel = UILabel(frame: CGRect(x: 0, y: 55, width: kScreenWidth / 5.0, height: 25))
+                    titleLabel.text = title
+                    titleLabel.textAlignment = .center
+                    titleLabel.font = UIFont.systemFont(ofSize: 10)
+                    titleLabel.textColor = UIColor.lightGray
+                    btn.addTarget(self, action: #selector(clickToolBarBtn(_:)), for: .touchUpInside)
+                    btn.addSubview(imageView)
+                    btn.addSubview(titleLabel)
+                    header.addSubview(btn)
+                }
             }
             reusableHeader.titleLabel.text = sectionData[indexPath.section].0
             reusableHeader.moreBrn.setTitle(sectionData[indexPath.section].1, for: .normal)
@@ -274,6 +330,9 @@ extension ENDiscoverVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 2 {
+            return CGSize(width: kScreenWidth, height: (kScreenWidth-30)/2.0 + 60)
+        }
         let itemWidth = (kScreenWidth-30-20)/3.0
         return CGSize(width: itemWidth, height: itemWidth+30)
     }
@@ -295,7 +354,7 @@ extension ENDiscoverVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section==0 {
-            return CGSize(width: kScreenWidth, height: kScreenWidth * 7.0 / 18.0 + 30.0 + 100.0)
+            return CGSize(width: kScreenWidth, height: kScreenWidth / 3.0 + 30.0 + 80.0 + 50.0)
         }
         return CGSize(width: kScreenWidth, height: 50)
     }
