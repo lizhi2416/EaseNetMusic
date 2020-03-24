@@ -24,6 +24,8 @@ let ENHomeHotwallList = "comment/hotwall/list"
 let ENHomeRecommendMVList = "personalized/mv"
 /// 每日推荐歌曲需要登录
 let ENDailyRecommendMusicSongs = "recommend/songs"
+/// 通过id获取音乐URL
+let ENGetMusicSongUrl = "song/url"
 
 
 enum ENApi {

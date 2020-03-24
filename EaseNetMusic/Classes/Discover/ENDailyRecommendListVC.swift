@@ -107,6 +107,8 @@ class ENDailyRecommendListVC: ENCustomNavController {
                     if let recommend = recommendData.recommend {
                         self?.musicLists.append(contentsOf: recommend)
                     }
+                } else if recommendData.code == 301 {
+                    self?.view.makeToast("请先登录")
                 }
             }
             

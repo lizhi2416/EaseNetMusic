@@ -38,18 +38,30 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
         return cv
     }()
     
-    lazy var bannerView: LLCycleScrollView = {
-        let cycleScrollView = LLCycleScrollView().then({ (cycleScrollView) in
-            cycleScrollView.backgroundColor = UIColor.background
-            cycleScrollView.autoScrollTimeInterval = 5
-            cycleScrollView.placeHolderImage = UIImage(named: "cm4_tvc_video_default_night")
-//            bannerView.coverImage = UIImage()
-            cycleScrollView.pageControlPosition = .center
-            cycleScrollView.pageControlBottom = 20
-            // 点击 item 回调
-            cycleScrollView.lldidSelectItemAtIndex = didSelectBanner(index:)
-        })
-        return cycleScrollView
+    
+    
+    lazy var toolBtns: [UIControl] = {
+        
+        var btns = [UIControl]()
+        
+        let toolTitles = ["每日推荐", "歌单", "排行榜", "电台", "直播"]
+        for (index, title) in toolTitles.enumerated() {
+            let btn = UIControl(frame: CGRect(x: CGFloat(index) * kScreenWidth / 5.0, y: kScreenWidth / 3.0 + 30.0, width: kScreenWidth / 5.0, height: 80))
+            btn.tag = 100 + index
+            let imageView = UIImageView(frame: CGRect(x: (kScreenWidth / 5.0 - 50)/2.0, y: 5.0, width: 50, height: 50))
+            imageView.image = UIImage(named: "cm5_set_icn_miniapp_pri_fm")
+            let titleLabel = UILabel(frame: CGRect(x: 0, y: 55, width: kScreenWidth / 5.0, height: 25))
+            titleLabel.text = title
+            titleLabel.textAlignment = .center
+            titleLabel.font = UIFont.systemFont(ofSize: 10)
+            titleLabel.textColor = UIColor.lightGray
+            btn.addTarget(self, action: #selector(clickToolBarBtn(_:)), for: .touchUpInside)
+            btn.addSubview(imageView)
+            btn.addSubview(titleLabel)
+            btns.append(btn)
+//            header.addSubview(btn)
+        }
+        return btns
     }()
     
     override func viewDidLoad() {
@@ -124,6 +136,7 @@ class ENDiscoverVC: ENCustomNavController, UISearchBarDelegate {
             collectionView.register(ENDiscoverCVCell.self, forCellWithReuseIdentifier: "ENDiscoverCVCell")
             collectionView.register(ENDiscoverMVListCell.self, forCellWithReuseIdentifier: "ENDiscoverMVListCell")
             collectionView.register(ENDiscoverHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ENDiscoverHeaderReusableView")
+            collectionView.register(ENDiscoverTopHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ENDiscoverTopHeaderReusableView")
             collectionView.delegate = self
             collectionView.dataSource = self
             collectionView.setPullRefreshBlock(pullHeader: { [weak self] in
@@ -285,10 +298,12 @@ extension ENDiscoverVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ENDiscoverHeaderReusableView", for: indexPath)
-        if let reusableHeader = header as? ENDiscoverHeaderReusableView {
-            if indexPath.section == 0 {
-                self.bannerView.frame = CGRect(x: 0, y: 15, width: kScreenWidth, height: kScreenWidth / 3.0)
+        
+        if indexPath.section == 0 {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ENDiscoverTopHeaderReusableView", for: indexPath)
+            if let reusableHeader = header as? ENDiscoverTopHeaderReusableView {
+                // 点击 item 回调
+                reusableHeader.bannerView.lldidSelectItemAtIndex = didSelectBanner(index:)
                 if let bannerData = bannerJson {
                     if bannerData["code"].int == 200 {
                         var imagePaths = [String]()
@@ -300,33 +315,28 @@ extension ENDiscoverVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
                                 imagePaths.append(imageUrl)
                             }
                         }
-                        self.bannerView.titles = imageTitles
-                        self.bannerView.imagePaths = imagePaths
+                        reusableHeader.bannerView.titles = imageTitles
+                        reusableHeader.bannerView.imagePaths = imagePaths
                     }
                 }
-                header.addSubview(self.bannerView)
                 
-                let toolTitles = ["每日推荐", "歌单", "排行榜", "电台", "直播"]
-                for (index, title) in toolTitles.enumerated() {
-                    let btn = UIControl(frame: CGRect(x: CGFloat(index) * kScreenWidth / 5.0, y: kScreenWidth / 3.0 + 30.0, width: kScreenWidth / 5.0, height: 80))
-                    btn.tag = 100 + index
-                    let imageView = UIImageView(frame: CGRect(x: (kScreenWidth / 5.0 - 50)/2.0, y: 5.0, width: 50, height: 50))
-                    imageView.image = UIImage(named: "cm5_set_icn_miniapp_pri_fm")
-                    let titleLabel = UILabel(frame: CGRect(x: 0, y: 55, width: kScreenWidth / 5.0, height: 25))
-                    titleLabel.text = title
-                    titleLabel.textAlignment = .center
-                    titleLabel.font = UIFont.systemFont(ofSize: 10)
-                    titleLabel.textColor = UIColor.lightGray
-                    btn.addTarget(self, action: #selector(clickToolBarBtn(_:)), for: .touchUpInside)
-                    btn.addSubview(imageView)
-                    btn.addSubview(titleLabel)
-                    header.addSubview(btn)
+                for toolBtn in reusableHeader.toolBtns {
+                    toolBtn.addTarget(self, action: #selector(clickToolBarBtn(_:)), for: .touchUpInside)
                 }
+                
+                reusableHeader.titleLabel.text = sectionData[indexPath.section].0
+                reusableHeader.moreBrn.setTitle(sectionData[indexPath.section].1, for: .normal)
+                
             }
-            reusableHeader.titleLabel.text = sectionData[indexPath.section].0
-            reusableHeader.moreBrn.setTitle(sectionData[indexPath.section].1, for: .normal)
+            return header
+        } else {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ENDiscoverHeaderReusableView", for: indexPath)
+            if let reusableHeader = header as? ENDiscoverHeaderReusableView {
+                reusableHeader.titleLabel.text = sectionData[indexPath.section].0
+                reusableHeader.moreBrn.setTitle(sectionData[indexPath.section].1, for: .normal)
+            }
+            return header
         }
-        return header
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

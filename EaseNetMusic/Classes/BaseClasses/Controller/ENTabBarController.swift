@@ -68,7 +68,9 @@ class ENTabBarController: UITabBarController, UITabBarControllerDelegate {
             if nvc.viewControllers.first is ENAccountVC {
                 if !ENSaveUitil.getLoginMark() {
                     if let currentNvc = self.selectedViewController as? UINavigationController {
-                        currentNvc.pushViewController(ENLoginVC(), animated: true)
+                        let loginVC = ENLoginVC()
+                        loginVC.hidesBottomBarWhenPushed = true
+                        currentNvc.pushViewController(loginVC, animated: true)
                         return false
                     }
                 }
